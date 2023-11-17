@@ -11,18 +11,13 @@ function setTopicDocument() {
 
   switch (ClaimKind) {
     case "Недотримання терміну доставки вантажу":
-      if (!SaveCargoFailureType) {
-        switch (RailwayConnectionType) {
-          case "Внутрішнє":
-            TopicDocument.value = 1;
-            break;
-          case "Міжнародне":
-            TopicDocument.value = 2;
-            break;
-        }
-      } else {
-        TopicDocument.value = null;
-        TopicDocument.text = null;
+      switch (RailwayConnectionType) {
+        case "Внутрішнє":
+          TopicDocument.value = 1;
+          break;
+        case "Міжнародне":
+          TopicDocument.value = 2;
+          break;
       }
       break;
 
@@ -75,35 +70,26 @@ function setTopicDocument() {
       break;
 
     case "Некоректне нарахування за перевезення вантажу та надані послуги":
-      if (!SaveCargoFailureType) {
-        switch (RailwayConnectionType) {
-          case "Внутрішнє":
-            TopicDocument.value = 11;
-            break;
-          case "Міжнародне":
-            TopicDocument.value = 12;
-            break;
-        }
-      } else {
-        TopicDocument.value = null;
-        TopicDocument.text = null;
+      switch (RailwayConnectionType) {
+        case "Внутрішнє":
+          TopicDocument.value = 11;
+          break;
+        case "Міжнародне":
+          TopicDocument.value = 12;
+          break;
       }
       break;
 
     case "Інше":
-      if (!SaveCargoFailureType) {
-        switch (RailwayConnectionType) {
-          case "Внутрішнє":
-            TopicDocument.value = 13;
-            break;
-          case "Міжнародне":
-            TopicDocument.value = 14;
-            break;
-        }
-      } else {
-        TopicDocument.value = null;
-        TopicDocument.text = null;
+      switch (RailwayConnectionType) {
+        case "Внутрішнє":
+          TopicDocument.value = 13;
+          break;
+        case "Міжнародне":
+          TopicDocument.value = 14;
+          break;
       }
+
       break;
 
     default:
